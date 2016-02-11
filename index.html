@@ -20,17 +20,15 @@
     <script>
         jQuery.sap.registerModulePath('AkuaJs', 'https://cdn.rawgit.com/Qrist0ph/AkuaJs-UI5/latest/build/AkuaJs');
         jQuery.sap.require("AkuaJs.Map");
-        eBezirkMitte = E(D("Bezirk"), "Mitte");
-        eBezirkPankow = E(D("Bezirk"), "Pankow");
-        eBezirkFriedrichshain = E(D("Bezirk"), "Friedrichshain");
+        eBezirkJachtHaven = E(D("Bezirk"), "JachtHaven");
+        eBezirkVaargeul = E(D("Bezirk"), "Vaargeul");
         new AkuaJs.Map({
             axis0: A({
-                crosslists: [TCL([T([eBezirkMitte]), T([eBezirkPankow])])]
+                crosslists: [TCL([T([eBezirkJachtHaven]), T([eBezirkVaargeul])])]
             }),
             connection: [
-                 T([eBezirkMitte], 88),
-                 T([eBezirkPankow], 33),
-                 T([eBezirkFriedrichshain], 55)],
+                 T([eBezirkJachtHaven], 88),
+                 T([eBezirkVaargeul], 33),
             color: "#FFD7AA",
             numberFormat: ",.2",
             mapCenter: [51.31, 3.13],
