@@ -58,7 +58,7 @@ geojson = {
           ]
         ]
       },
-      "properties": {}
+      "properties": {"Name":"JachtHaven"}
     },
     {
       "type": "Feature",
@@ -133,7 +133,7 @@ geojson = {
           ]
         ]
       },
-      "properties": {}
+      "properties": {"Name":"VaarGeul"}
     }
   ]
 }
