@@ -1,0 +1,8 @@
+body{
+  background-color:#1abc9c;
+  overflow:hidden;
+}
+.container{
+  width:600px;
+  height:600px;
+}
