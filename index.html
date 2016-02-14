@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+
+
+    <script src="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/D3/d3.min.js"></script>
+    <script data-main="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/main.js" src="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/require.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/nvd3/nv.d3.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/leaflet/leaflet.css">
+    <script src="blankenberge.geojson"></script>
+
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_bluecrystal">
+    </script>
+
+    <script>
+        jQuery.sap.registerModulePath('AkuaJs', 'https://cdn.rawgit.com/Qrist0ph/AkuaJs-UI5/latest/build/AkuaJs');
+        jQuery.sap.require("AkuaJs.Map");
+
+        eBezirkJachtHaven = E(D("Bezirk"), "JachtHaven");
+        eBezirkVaargeul = E(D("Bezirk"), "VaarGeul");
+
+        new AkuaJs.Map({
+            axis0: A({
+                crosslists: [TCL([T([eBezirkJachtHaven]), T([eBezirkVaargeul])])]
+            }),
+            connection: [
+                 T([eBezirkJachtHaven], 88),
+                 T([eBezirkVaargeul], 33)],
+            color: "#FFD7AA",
+            numberFormat: ",.2",
+            mapCenter: [51.31, 3.13],
+            zoom: 10,
+            geoJson: geojson,
+            click: function (t, v) { alert(t); }
+        })
+         .placeAt('content')
+        ;
+    </script>
+
+
+</head>
+<body class="sapUiBody" role="application">
+    <div id="content"></div>
+</body>
+
+
+</html>
