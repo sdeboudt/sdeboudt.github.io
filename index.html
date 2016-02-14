@@ -5,10 +5,10 @@
     <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
 
 
-    <script src="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/D3/d3.min.js"></script>
-    <script data-main="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/main.js" src="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/require.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/nvd3/nv.d3.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Qrist0ph/AkuaJs/latest/dist/plain/libs/leaflet/leaflet.css">
+    <script src="scripts/AkuaJs/AkuaJs.min/libs/D3/d3.min.js"></script>
+    <script data-main="scripts/AkuaJs/AkuaJs.min/main.js" src="scripts/AkuaJs/AkuaJs.min/libs/require.js"></script>
+    <link rel="stylesheet" href="scripts/AkuaJs/AkuaJs.min/libs/nvd3/nv.d3.min.css" type="text/css" />
+    <link rel="stylesheet" href="scripts/AkuaJs/AkuaJs.min/libs/leaflet/leaflet.css">
     <script src="blankenberge.geojson"></script>
 
     <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
@@ -18,7 +18,7 @@
     </script>
 
     <script>
-        jQuery.sap.registerModulePath('AkuaJs', 'https://cdn.rawgit.com/Qrist0ph/AkuaJs-UI5/latest/build/AkuaJs');
+        jQuery.sap.registerModulePath('AkuaJs', 'scripts/AkuaJs/');
         jQuery.sap.require("AkuaJs.Map");
 
         eBezirkJachtHaven = E(D("Bezirk"), "JachtHaven");
