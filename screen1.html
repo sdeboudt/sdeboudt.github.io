@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+
+
+    <script src="scripts/AkuaJs/AkuaJs.min/libs/D3/d3.min.js"></script>
+    <script data-main="scripts/AkuaJs/AkuaJs.min/main.js" src="scripts/AkuaJs/AkuaJs.min/libs/require.js"></script>    
+    <link rel="stylesheet" href="scripts/AkuaJs/AkuaJs.min/libs/nvd3/nv.d3.min.css" type="text/css" />
+    <link rel="stylesheet" href="scripts/AkuaJs/AkuaJs.min/libs/leaflet/leaflet.css">
+    <script src="berliner-bezirke.geojson"></script>
+
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_bluecrystal">
+    </script>
+
+    <script>
+        jQuery.sap.registerModulePath('AkuaJs', 'scripts/AkuaJs/');
+        jQuery.sap.require("AkuaJs.Map");
+
+        eBezirkMitte = E(D("Bezirk"), "Mitte");
+        eBezirkPankow = E(D("Bezirk"), "Pankow");
+        eBezirkFriedrichshain = E(D("Bezirk"), "Friedrichshain");
+
+        new AkuaJs.Map({
+            axis0: A({
+                crosslists: [TCL([T([eBezirkMitte]), T([eBezirkPankow])])]
+            }),
+            connection: [
+                 T([eBezirkMitte], 88),
+                 T([eBezirkPankow], 33),
+                 T([eBezirkFriedrichshain], 55)],
+            color: "#FFD7AA",
+            numberFormat: ",.2",
+            mapCenter: [52.50, 13.2],
+            zoom: 10,
+            geoJson: geojson,
+            click: function (t, v) { alert(t); }
+        })
+         .placeAt('content')
+        ;
+    </script>
+
+
+</head>
+<body class="sapUiBody" role="application">
+    <div id="content"></div>
+</body>
+
+
+</html>
