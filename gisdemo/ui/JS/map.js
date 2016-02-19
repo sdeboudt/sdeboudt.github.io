@@ -237,6 +237,9 @@ function onEachFeature(feature, layer) {
 function querystates(statesData){
 	$.ajax({
 		url: 'https://s12hanaxs.hanatrial.ondemand.com/p1941869368trial/geodata/services/geodata.xsjs',
+		type: "GET", // Added HTTP method
+                username: "sdeboudt@gmail.com", // Most SAP web services require credentials
+                password: "K@ndinsky01"
 		data: statesData,
 		success: function (statesData) {
 			alert('data recieved');
