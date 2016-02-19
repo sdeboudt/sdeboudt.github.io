@@ -1,6 +1,6 @@
 var map = L.map('map', {
 	zoomControl : true
-}).setView([ 22.527636, 78.832675 ], 4);
+}).setView([ 52.50, 13.2 ], 4);
 
 var statesData = [];
 var Poli_Icon;
