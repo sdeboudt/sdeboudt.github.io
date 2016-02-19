@@ -1,9 +1,8 @@
-var eString = "";
 
-try
-{
 	var conn = $.db.getConnection();
-	var pstmt = conn.prepareStatement("select ST_CODE, ST_NAME, color, PC_NAME, PC_TYPE, PC_NO, PARTY, shape.ST_AsGeoJson() as ST_SHAPE from DEMO_SPA.INDIA_PC");
+	var query = "select TOP 10 tradlac, naam, streek, length, area, shape.ST_AsGeoJson() as shape FROM \"NEO_BIEC508RFYRBA9OSGMDT9OIXV\".\"ile_la_traditioneel_landschap\"";
+	// $.trace.debug(query);
+	var pstmt = conn.prepareStatement(query);
 	var rs = pstmt.executeQuery();
 
 
@@ -11,7 +10,7 @@ try
 	response.features = [];
 
 	while ( rs.next() ) {
-		response.features.push( {type: "Feature",  ST_CODE:rs.getString(1),ST_NAME:rs.getString(2), color:rs.getString(3), PC_NAME:rs.getString(4),PC_TYPE:rs.getString(5), PC_NO:rs.getInteger(6),PARTY:rs.getString(7), geometry: JSON.parse( rs.getString(8)) } );
+		response.features.push( {type: "Feature",  tradlac:rs.getString(1), naam:rs.getString(2), streek:rs.getString(3), length:rs.getString(4), area:rs.getString(5), geometry: JSON.parse( rs.getString(6)) } );
 	}
 
 	response.properties = {};
@@ -23,23 +22,7 @@ try
 	$.response.contentType = "application/json";
 	$.response.headers.set("Access-Control-Allow-Origin","*");
 	$.response.setBody(JSON.stringify(response));	
-	response.status = $.net.http.OK;
+	$.response.status = $.net.http.OK;
 
-
-}
-catch(e)
-{
-	eString = "\nException.toString(): " + e.toString() + "\n";
-    var prop = "";
-    
-    for (prop in e) {
-        eString += prop + ": " + e[prop] + "\n";
-
-    response.status = $.net.http.INTERNAL_SERVER_ERROR;
-    response.contentType = "plain/text";
-    response.setBody(eString);
- 
-}
-}
 
    
