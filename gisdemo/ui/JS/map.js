@@ -239,7 +239,7 @@ function querystates(statesData){
 		url: 'https://s12hanaxs.hanatrial.ondemand.com/p1941869368trial/geodata/services/geodata.xsjs',
 		type: "GET", // Added HTTP method
                 username: "p1941869368", // Most SAP web services require credentials
-                password: "K@ndinsky01"
+                password: "K@ndinsky01",
 		data: statesData,
 		success: function (statesData) {
 			alert('data recieved');
