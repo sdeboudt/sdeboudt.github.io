@@ -236,7 +236,7 @@ function onEachFeature(feature, layer) {
 
 function querystates(statesData){
 	$.ajax({
-		url: '../model/geodata.xsjs',
+		url: 'https://s12hanaxs.hanatrial.ondemand.com/p1941869368trial/geodata/services/geodata.xsjs',
 		data: statesData,
 		success: function (statesData) {
 			alert('data recieved');
