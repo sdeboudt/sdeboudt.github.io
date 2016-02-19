@@ -239,7 +239,7 @@ function querystates(statesData){
 		url: '../model/geodata.xsjs',
 		data: statesData,
 		success: function (statesData) {
-			alert('data recieved');
+			// alert('data received');
 			$('#wrapper').hide();
 			geojson = L.geoJson(statesData, {
 				style : style,
