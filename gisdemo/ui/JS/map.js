@@ -11,15 +11,9 @@ var marker;
 querystates(statesData);
 
 
-var cloudmade = L
-.tileLayer(
-		'http://{s}.tile.cloudmade.com/77b3738c9c724dd88e52815e3a5317da/122598/256/{z}/{x}/{y}.png',
-		{
-			maxZoom : 12,
-			key : '77b3738c9c724dd88e52815e3a5317da',
-			//styleId : 120982
-			styleId: 122598
-		}).addTo(map);
+var cloudmade = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
 // control that shows state info on hover
 
@@ -242,10 +236,13 @@ function onEachFeature(feature, layer) {
 
 function querystates(statesData){
 	$.ajax({
-		url: '../model/geodata.xsjs',
-		data: statesData,
-		success: function (statesData) {
-			//alert('data recieved');
+		'async': false,
+                'global': false,
+                'url': "JS/S01_PC.json",
+                'dataType': "json",
+		'data': statesData,
+		'success': function (statesData) {
+			alert('data received');
 			$('#wrapper').hide();
 			geojson = L.geoJson(statesData, {
 				style : style,
