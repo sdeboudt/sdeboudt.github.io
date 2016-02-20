@@ -1,6 +1,6 @@
 var map = L.map('map', {
 	zoomControl : true
-}).setView([ 51.3123743, 3.1327685 ], 10);
+}).setView([ 22.527636, 78.832675 ], 4);
 
 var statesData = [];
 var Poli_Icon;
@@ -236,10 +236,10 @@ function onEachFeature(feature, layer) {
 
 function querystates(statesData){
 	$.ajax({
-		url: '../model/geodata.xsjs',
+		url: 'SO1_PC.json',
 		data: statesData,
 		success: function (statesData) {
-			// alert('data received');
+			alert('data received');
 			$('#wrapper').hide();
 			geojson = L.geoJson(statesData, {
 				style : style,
