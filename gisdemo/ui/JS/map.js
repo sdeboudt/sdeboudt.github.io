@@ -236,7 +236,7 @@ function onEachFeature(feature, layer) {
 
 function querystates(statesData){
 	$.ajax({
-		url: 'S01_PC.json',
+		url: '/JS/S01_PC.json',
 		data: statesData,
 		success: function (statesData) {
 			alert('data received');
