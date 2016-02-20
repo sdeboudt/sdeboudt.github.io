@@ -29,6 +29,7 @@ info.onAdd = function(map) {
 info.update = function(props) {
 	this._div.innerHTML = '<div id="flag1_div"><img id="flag1" src="  images/india.gif " /></div><span><h3>CONSTITUENCIES DETAIL </h3></span>'
 		+ (props ? '<table ><tr><th>State Name</th><td> '
+<<<<<<< HEAD
 				+ props.ST_NAME
 				+ '</td></tr><tr><th> Constituency Name </th><td> '
 				+ props.PC_NAME
@@ -37,6 +38,16 @@ info.update = function(props) {
 				+ '</td></tr> <tr><th>No of Seats</th><td> ' + props.PC_NO
 				+ '</td></tr> <tr><th>Current-Party</th><td>'
 				+ props.PARTY + '</td></tr></table>'
+=======
+				+ props.properties.ST_NAME
+				+ '</td></tr><tr><th> Constituency Name </th><td> '
+				+ props.properties.PC_NAME
+				+ '</td></tr> <tr><th>Constituency Type</th><td>'
+				+ props.properties.PC_TYPE
+				+ '</td></tr> <tr><th>No of Seats</th><td> ' + props.properties.PC_NO
+				+ '</td></tr> <tr><th>Current-Party</th><td>'
+				+ props.properties.PARTY + '</td></tr></table>'
+>>>>>>> gh-pages
 				: 'Hover over a state');
 };
 
@@ -56,6 +67,7 @@ info1.update = function(props1) {
 		this._div.innerHTML = '<div><span><h3>PARTY PERFORMANCE</h3></span><span><h5>Please Draw a polygon/rectangle on the<br> MAP to see results</h5></span></div>';
 
 	}
+<<<<<<< HEAD
 	
 	else if(props1 === 'clear')
 	{
@@ -65,6 +77,17 @@ info1.update = function(props1) {
 		
 	}
 		
+=======
+
+	else if(props1 === 'clear')
+	{
+
+		this._div.innerHTML = '<div><span><h3>PARTY PERFORMANCE</h3></span><span><h5>Please Draw a polygon/rectangle on the<br> MAP to see results</h5></span></div>';
+
+
+	}
+
+>>>>>>> gh-pages
 
 	else if (props1 != undefined ) {
 		var string_div = '';
@@ -110,7 +133,11 @@ var drawControl = new L.Control.Draw({
 			}
 		},
 		circle: false,
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> gh-pages
 		marker: false
 	},
 	edit: {
@@ -124,7 +151,11 @@ var array = {};
 map.on('draw:created', function (e) {
 	var type = e.layerType,
 		layer = e.layer;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> gh-pages
 
 	if (type === 'polygon' || type === 'rectangle' ) {
 		//layer.bindPopup('A popup!');
@@ -135,11 +166,19 @@ map.on('draw:created', function (e) {
 	    // var params = JSON.stringify(array);
 	     //var params =  { "polydim" : array};
       // array = layer._latlngs;
+<<<<<<< HEAD
     
 		//var string = JSON.parse(params);	
 	
 	  // JSON.stringify({ polygon_dim: array });
 	  
+=======
+
+		//var string = JSON.parse(params);
+
+	  // JSON.stringify({ polygon_dim: array });
+
+>>>>>>> gh-pages
 	     var string1 = '';
 	     var count = 1;
 	     var lat_lng_first = '';
@@ -151,12 +190,17 @@ map.on('draw:created', function (e) {
 	     		   lat_lng_first =  layer._latlngs[i].lng + ' ' +  layer._latlngs[i].lat;
 	     		   count = count + 1;
 	     		  }
+<<<<<<< HEAD
 	     	  
+=======
+
+>>>>>>> gh-pages
 	     	  string1 = string1 +  layer._latlngs[i].lng + ' ' +  layer._latlngs[i].lat + ',';
 	     	}
 
 	      string1 = string1 + lat_lng_first;
 	     // string1 = string1.substring(0, string1.length - 1);
+<<<<<<< HEAD
 	     
 	      var params =  { "polydim" : string1};
 	     
@@ -165,6 +209,16 @@ map.on('draw:created', function (e) {
 	   queryclipbypolygon(params);
 		
 		
+=======
+
+	      var params =  { "polydim" : string1};
+
+
+
+	   queryclipbypolygon(params);
+
+
+>>>>>>> gh-pages
 	}
 
 	drawnItems.addLayer(layer);
@@ -183,7 +237,11 @@ map.on('draw:deleted', function (e) {
 	//var layers = e.layers;
 
 	info1.update('clear');
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> gh-pages
 });
 
 
@@ -237,12 +295,21 @@ function onEachFeature(feature, layer) {
 function querystates(statesData){
 	$.ajax({
 		'async': false,
+<<<<<<< HEAD
                 'global': false,
                 'url': "JS/S01_PC.json",
                 'dataType': "json",
 		'data': statesData,
 		'success': function (statesData) {
 			alert('data received');
+=======
+    'global': false,
+    'url': "JS/S01_PC.json",
+    'dataType': "json",
+		'data': statesData,
+		'success': function (statesData) {
+			// alert('Data received');
+>>>>>>> gh-pages
 			$('#wrapper').hide();
 			geojson = L.geoJson(statesData, {
 				style : style,
@@ -251,7 +318,11 @@ function querystates(statesData){
 		}
 	});
 }
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> gh-pages
 	function queryclipbypolygon(params){
 		$.ajax({
 			url: '../model/querybypolygon.xsjs',
@@ -259,7 +330,12 @@ function querystates(statesData){
 			success: function (clipdata) {
 				info1.update(clipdata);
 			}
+<<<<<<< HEAD
 		});	
 	}
 
 
+=======
+		});
+	}
+>>>>>>> gh-pages
