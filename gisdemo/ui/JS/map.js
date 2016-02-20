@@ -112,11 +112,6 @@ var drawControl = new L.Control.Draw({
 			}
 		},
 		circle: false,
-<<<<<<< HEAD
-	
-=======
-
->>>>>>> gh-pages
 		marker: false
 	},
 	edit: {
