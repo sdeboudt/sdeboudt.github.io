@@ -190,7 +190,7 @@ function style(feature) {
 	return {
 		weight : 1,
 		opacity : 0.5,
-		color : 'white',
+		color : 'green',
 		dashArray : '2',
 		fillOpacity : 0.8,
 		fillColor : feature.color
