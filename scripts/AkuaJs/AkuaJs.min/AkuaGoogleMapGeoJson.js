@@ -1,0 +1,2 @@
+define(["core/CoreBundle"],function(){function b(a){Apple.call(this,a);this.axis0=a.axis0}b.prototype=new Apple;b.prototype.constructor=b;b.prototype.getView=function(){return this.view=$('<div id="'+this.divid+'" style="height:500px;width:500px"  > '+this.divid+"</div> ")};b.prototype.updateValues=function(a){this.axis0.Tuples().ToArray();a={zoom:4,center:new google.maps.LatLng(0,0)};a=new google.maps.Map(this.view[0],a);a.data.loadGeoJson("countries.geo.json");a.data.setStyle({fillColor:"green",
+strokeWeight:1})};return function(a){return new b.prototype.constructor(a)}});
