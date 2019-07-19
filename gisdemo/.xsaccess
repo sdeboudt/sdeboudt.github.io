@@ -1,8 +1,0 @@
-{
-	"exposed": true,
-	"authentication" :
-          [
-                { "method" : "Basic" }
-          ],
-    "authorization": [ "p1941869368trial.geodata::Basic" ]
-}
