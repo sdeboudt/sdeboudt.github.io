@@ -31,10 +31,6 @@
   </url>
   
   <url>
-    <loc>/publication/</loc>
-  </url>
-  
-  <url>
     <loc>/tags/</loc>
     <priority>0</priority>
   </url>
