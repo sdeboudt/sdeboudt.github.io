@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
-    <link>/authors/admin/</link>
-    <description>Recent content on Academic</description>
+    <title>Stephane Deboudt</title>
+    <link>htps://about.me/stephane.deboudt/authors/admin/</link>
+    <description>Recent content on Stephane Deboudt</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     
-	    <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="htps://about.me/stephane.deboudt/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/authors/admin/</link>
+      <link>htps://about.me/stephane.deboudt/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/authors/admin/</guid>
+      <guid>htps://about.me/stephane.deboudt/authors/admin/</guid>
       <description>&lt;p&gt;Stephane Deboudt is Chief Data Scientist at Spacewell.&lt;/p&gt;
 </description>
     </item>
