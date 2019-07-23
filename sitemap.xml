@@ -3,35 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/authors/admin/</loc>
+    <loc>https://about.me/stephane.deboudt/authors/admin/</loc>
   </url>
   
   <url>
-    <loc>/authors/</loc>
+    <loc>https://about.me/stephane.deboudt/authors/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://about.me/stephane.deboudt/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://about.me/stephane.deboudt/post/</loc>
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
+    <loc>https://about.me/stephane.deboudt/publication_types/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://about.me/stephane.deboudt/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://about.me/stephane.deboudt/tags/</loc>
     <priority>0</priority>
   </url>
   
