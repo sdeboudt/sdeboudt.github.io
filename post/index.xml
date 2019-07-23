@@ -6,9 +6,28 @@
     <description>Recent content in Posts on Stephane Deboudt</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My First Blog post using blogdown</title>
+      <link>/post/my-first-blog-post-using-blogdown/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/my-first-blog-post-using-blogdown/</guid>
+      <description>
+
+&lt;p&gt;Hope you can see this blog post!&lt;/p&gt;
+
+&lt;h1 id=&#34;hope-you-can-see-this-blog-post&#34;&gt;Hope you can see this blog post!&lt;/h1&gt;
+
+&lt;h2 id=&#34;hope-you-can-see-this-blog-post-1&#34;&gt;Hope you can see this blog post!&lt;/h2&gt;
+
+&lt;h3 id=&#34;hope-you-can-see-this-blog-post-2&#34;&gt;Hope you can see this blog post!&lt;/h3&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
