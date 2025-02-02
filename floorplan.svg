@@ -1,0 +1,5 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect id="room1" x="50" y="50" width="100" height="100" fill="blue" />
+  <rect id="room2" x="200" y="50" width="100" height="100" fill="blue" />
+  <path id="wall1" d="M50 200 L150 200 L150 250 L50 250 Z" stroke="black" fill="none"/>
+</svg>
